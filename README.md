@@ -17,7 +17,7 @@ We are now merging Bi-link and Zeroshot Entity Linking for Fandomwiki to the cur
 
 Bi-link (Pytorch): 
 
-* 
+* Bidirectional Contrastive Learning  with Syntax Prompts for Link Prediction![image](./images/overview.png)
 
 Zeroshot Entity Linking on Fandomwiki (PyTorch): 
 
