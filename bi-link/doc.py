@@ -208,7 +208,6 @@ class Example:
     def vectorize(self) -> dict:
         head_desc, tail_desc = self.head_desc, self.tail_desc
         if args.use_link_graph:
-            # 如果文本长度不够从邻居补全到20
             if len(head_desc.split()) < 20:
                 head_desc += ' ' + get_neighbor_desc(head_id=self.head_id, tail_id=self.tail_id)
             if len(tail_desc.split()) < 20:
@@ -369,7 +368,6 @@ def load_data(path: str,
         if add_forward_triplet:
             examples.append(Example(template=template_hr, **obj))
         if add_backward_triplet:
-            # 数据增强 加上反向关系，inverse published by
             examples.append(Example(template=template_hr_inv, **reverse_triplet(obj)))
         data[i] = None
 
